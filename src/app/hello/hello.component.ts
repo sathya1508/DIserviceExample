@@ -13,12 +13,12 @@ export class HelloComponent implements OnInit {
   constructor(private data:DataService) { }
 
   ngOnInit() {
+    //this.data.users = null;
   }
 
   IncreaseCount():void
   {
     this.data.count++;
-    
   }
 
 }
