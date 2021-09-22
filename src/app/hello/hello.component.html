@@ -1,3 +1,16 @@
+<h2> hello works {{ data.count}}! </h2>
+<button (click)="IncreaseCount()">Increase Count</button>
 
-  <h2> hello works {{ data.count}}! </h2>
-<button (click)="IncreaseCount()">Increase Count</button> 
+
+<div *ngIf='data.users'>
+  {{data.users.Count}} users are available.
+
+  <div *ngFor='let user of data.users'>
+    <h1> {{ user.name }} </h1>
+    <h2> {{ user.age }} </h2>
+    <div [ngSwitch]="user.gender">
+      <div *ngSwitchCase="'m'"> male </div>
+      <div *ngSwitchCase="'f'"> female </div>
+    </div>
+  </div>
+</div>
